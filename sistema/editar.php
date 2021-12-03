@@ -28,34 +28,34 @@ else
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<title>Projeto Final - Editar Livro</title>
+	<title>Projeto Final - Editar Produto</title>
 </head>
 <body class="container-fluid">
-
+	<?php include_once '../navbar.php'; ?>
 	<h1>Projeto Final de PHP</h1>
 
 	<p>
 		<a href="index.php" class="btn btn-primary btn-sm">Cancelar Edição</a>
 	</p>
 
-	<h3>Editar Dados do Livro:</h3>
+	<h3>Editar Dados do Produto:</h3>
 
 	<div class="col-5">
 		<form action="editado.php" method="post">
 			
 			<p>
 				<label class="form-label">Nome do Produto</label><br>
-				<input type="text" name="nome" required value="<?= $livro['titulo'] ?>" class="form-control">
+				<input type="text" name="nome" required value="<?= $produto['nome'] ?>" class="form-control">
 			</p>
 
 			<p>
 				<label class="form-label">Quantidade do Produto</label><br>
-				<input type="text" name="quantidade" required value="<?= $livro['autor'] ?>" class="form-control">
+				<input type="text" name="quantidade" required value="<?= $produto['quantidade'] ?>" class="form-control">
 			</p>
 
 			<p>
 				<label class="form-label">Preço do Produto</label><br>
-				<input type="text" name="preco" required value="<?= $livro['editora'] ?>" class="form-control">
+				<input type="text" name="preco" required value="<?= $produto['preco'] ?>" class="form-control">
 			</p>
 
 			<p>

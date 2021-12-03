@@ -6,14 +6,14 @@ if (!isset($_POST['salvar']) || empty($_POST['titulo']) || empty($_POST['autor']
 }
 else
 {
-	$id_livro = $_POST['id_livro'];
-	$titulo	  = $_POST['titulo'];
-	$autor    = $_POST['autor'];
-	$editora  = $_POST['editora'];
+	$id = $_POST['id'];
+	$nome	  = $_POST['nome'];
+	$quantidade    = $_POST['quantidade'];
+	$preco  = $_POST['preco'];
 
-	include_once '../database/livro.dao.php';
+	include_once '../database/crud.php';
 
-	$result = editar($id_livro, $titulo, $autor, $editora);
+	$result = editar($id, $nome, $quantidade, $preco);
 
 	if ($result)
 	{
