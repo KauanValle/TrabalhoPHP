@@ -1,7 +1,7 @@
 <?php  
 include_once 'conexao.php';
 
-function salvar_livro($nome, $quantidade, $preco)
+function salvar($nome, $quantidade, $preco)
 {
 	$conn = conectar();
 

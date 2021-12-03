@@ -1,19 +1,19 @@
 <?php  include_once 'lock.php';
-if (!isset($_POST['salvar']) || empty($_POST['titulo']) || empty($_POST['autor']) || empty($_POST['editora']))
+if (!isset($_POST['salvar']) || empty($_POST['nome']) || empty($_POST['quantidade']) || empty($_POST['preco']))
 {
 	header('location:index.php?msg=cadembranco');
 }
 else
 {
-	$titulo	 = $_POST['titulo'];
-	$autor   = $_POST['autor'];
-	$editora = $_POST['editora'];
+	$nome	 = $_POST['nome'];
+	$quantidade   = $_POST['quantidade'];
+	$preco = $_POST['preco'];
 
-	include_once '../database/livro.dao.php';
+	include_once '../database/crud.php';
 
-	$result = salvar_livro($titulo, $autor, $editora);
+	$resultado = salvar($nome, $quantidade, $preco);
 
-	if ($result)
+	if ($resultado)
 	{
 		header('location:index.php?msg=cadastrado');
 	}
