@@ -32,10 +32,10 @@ else
 </head>
 <body class="container-fluid">
 
-	<h1>LivroSystem - Editar Livro</h1>
+	<h1>Projeto Final de PHP</h1>
 
 	<p>
-		<a href="index.php" class="btn btn-primary btn-sm">Cencelar Edição</a>
+		<a href="index.php" class="btn btn-primary btn-sm">Cancelar Edição</a>
 	</p>
 
 	<h3>Editar Dados do Livro:</h3>
@@ -44,25 +44,25 @@ else
 		<form action="editado.php" method="post">
 			
 			<p>
-				<label class="form-label">Título</label><br>
-				<input type="text" name="titulo" required value="<?= $livro['titulo'] ?>" class="form-control">
+				<label class="form-label">Nome do Produto</label><br>
+				<input type="text" name="nome" required value="<?= $livro['titulo'] ?>" class="form-control">
 			</p>
 
 			<p>
-				<label class="form-label">Autor</label><br>
-				<input type="text" name="autor" required value="<?= $livro['autor'] ?>" class="form-control">
+				<label class="form-label">Quantidade do Produto</label><br>
+				<input type="text" name="quantidade" required value="<?= $livro['autor'] ?>" class="form-control">
 			</p>
 
 			<p>
-				<label class="form-label">Editora</label><br>
-				<input type="text" name="editora" required value="<?= $livro['editora'] ?>" class="form-control">
+				<label class="form-label">Preço do Produto</label><br>
+				<input type="text" name="preco" required value="<?= $livro['editora'] ?>" class="form-control">
 			</p>
 
 			<p>
 				<button type="submit" name="salvar" class="btn btn-outline-primary">Salvar Alterações</button>
 			</p>
 
-			<input type="hidden" name="id_livro" value="<?= $livro['id_livro'] ?>">
+			<input type="hidden" name="id" value="<?= $produto['id'] ?>">
 
 		</form>
 	</div>
