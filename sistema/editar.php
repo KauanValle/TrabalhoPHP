@@ -52,7 +52,7 @@ else
 				
 				<p>
 					<label class="form-label">Nome do Produto</label><br>
-					<input type="text" name="nome" required value="<?= $produto['nome']; ?>" class="form-control">
+					<input type="text" name="nome" required value="<?= $getProduto['nome']; ?>" class="form-control">
 				</p>
 
 				<p>
