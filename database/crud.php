@@ -84,7 +84,7 @@ function link_deletar($id)
 
 function link_editar($id)
 {
-	$link = '<a href="editar.php?id_livro='.$id.'" class="btn btn-warning">Editar</a>';
+	$link = '<a href="editar.php?id='.$id.'" class="btn btn-warning">Editar</a>';
 	return $link;
 }
 
