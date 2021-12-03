@@ -38,17 +38,17 @@ include_once '../database/crud.php'; ?>
 			<form action="cadastrar.php" method="post">
 				
 				<p>
-					<label class="form-label">Título</label><br>
+					<label class="form-label">Nome do Produto</label><br>
 					<input type="text" name="nome" required class="form-control">
 				</p>
 
 				<p>
-					<label class="form-label">Autor</label><br>
+					<label class="form-label">Quantidade do Produto</label><br>
 					<input type="text" name="quantidade" required class="form-control">
 				</p>
 
 				<p>
-					<label class="form-label">Editora</label><br>
+					<label class="form-label">Preço do Produto</label><br>
 					<input type="text" name="preco" required class="form-control">
 				</p>
 

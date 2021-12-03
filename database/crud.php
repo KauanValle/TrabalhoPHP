@@ -48,22 +48,22 @@ function exibir_livros()
 						<table class="table table-hover">
 							<tr>
 								<th>ID #</th>
-								<th>Título</th>
-								<th>Autor</th>
-								<th>Editora</th>
+								<th>Nome</th>
+								<th>Quantidade</th>
+								<th>Preço</th>
 								<th>Deletar</th>
 								<th>Editar</th>
 							</tr>';
 
-		while ($livro = mysqli_fetch_assoc($result))
+		while ($produto = mysqli_fetch_assoc($result))
 		{
 			$retorno .= '<tr>';
-			$retorno .= "<td>" . $livro['id_livro'] . "</td>";
-			$retorno .= "<td>" . $livro['titulo']   . "</td>";
-			$retorno .= "<td>" . $livro['autor']    . "</td>";
-			$retorno .= "<td>" . $livro['editora']  . "</td>";
-			$retorno .= "<td>" . link_deletar($livro['id_livro']) . "</td>";
-			$retorno .= "<td>" . link_editar($livro['id_livro'])  . "</td>";
+			$retorno .= "<td>" . $produto['id'] . "</td>";
+			$retorno .= "<td>" . $produto['nome']   . "</td>";
+			$retorno .= "<td>" . $produto['quantidade']    . "</td>";
+			$retorno .= "<td>" . $produto['preco']  . "</td>";
+			$retorno .= "<td>" . link_deletar($produto['id']) . "</td>";
+			$retorno .= "<td>" . link_editar($produto['id'])  . "</td>";
 			$retorno .= '</tr>';
 		}
 
