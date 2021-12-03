@@ -2,10 +2,10 @@
 
 function conectar()
 {
-	$HOST = "";
-	$USERNAME = "";
+	$HOST = "localhost";
+	$USERNAME = "root";
 	$PASSWORD = "";
-	$DBNAME = "";
+	$DBNAME = "trabalhophp";
 
 	return mysqli_connect($HOST, $USERNAME, $PASSWORD, $DBNAME);
 }
