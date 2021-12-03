@@ -15,7 +15,7 @@ else
 	}
 	else
 	{
-		$produto = mysqli_fetch_assoc($result);
+		$getProduto = mysqli_fetch_assoc($result);
 	}
 }
 
@@ -57,19 +57,19 @@ else
 
 				<p>
 					<label class="form-label">Quantidade do Produto</label><br>
-					<input type="text" name="quantidade" required value="<?= $produto['quantidade']; ?>" class="form-control">
+					<input type="text" name="quantidade" required value="<?= $getProduto['quantidade']; ?>" class="form-control">
 				</p>
 
 				<p>
 					<label class="form-label">Preço do Produto</label><br>
-					<input type="text" name="preco" required value="<?= $produto['preco']; ?>" class="form-control">
+					<input type="text" name="preco" required value="<?= $getProduto['preco']; ?>" class="form-control">
 				</p>
 
 				<p>
 					<button type="submit" name="salvar" class="btn btn-outline-primary">Salvar Alterações</button>
 				</p>
 
-				<input type="hidden" name="id" value="<?= $produto['id'] ?>">
+				<input type="hidden" name="id" value="<?= $getProduto['id'] ?>">
 
 			</form>
 		</div>
