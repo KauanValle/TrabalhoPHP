@@ -76,7 +76,7 @@ function exibir()
 
 function link_deletar($id)
 {
-	$link = '<a href="deletar.php?id_livro='.$id.'" 
+	$link = '<a href="deletar.php?id='.$id.'" 
 	onclick="return confirm(\'Tem certeza que deseja excluir este livro?\')" class="btn btn-danger">Deletar</a>';
 
 	return $link;
@@ -120,7 +120,7 @@ function buscar_livro($id)
 	return null;
 }
 
-function editar($nome, $quantidade, $preco, $id)
+function editar($id, $nome, $quantidade, $preco)
 {
 	$conn = conectar();
 
