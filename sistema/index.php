@@ -39,17 +39,17 @@ include_once '../database/crud.php'; ?>
 				
 				<p>
 					<label class="form-label">Título</label><br>
-					<input type="text" name="titulo" required class="form-control">
+					<input type="text" name="nome" required class="form-control">
 				</p>
 
 				<p>
 					<label class="form-label">Autor</label><br>
-					<input type="text" name="autor" required class="form-control">
+					<input type="text" name="quantidade" required class="form-control">
 				</p>
 
 				<p>
 					<label class="form-label">Editora</label><br>
-					<input type="text" name="editora" required class="form-control">
+					<input type="text" name="preco" required class="form-control">
 				</p>
 
 				<p>
