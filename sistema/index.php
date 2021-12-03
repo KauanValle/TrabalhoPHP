@@ -9,56 +9,56 @@ include_once '../database/livro.dao.php'; ?>
 	<title>Projeto Final - Area Restrita</title>
 </head>
 <body class="container-fluid">
+	<?php include_once '../navbar.php'; ?>
+	<div class="container">
+		<p>
+			<a href="logout.php" class="btn btn-primary btn-sm">Sair do sistema</a>
+		</p>
 
-	<h1>LivroSystem - Área Restrita</h1>
+		<?php  
 
-	<p>
-		<a href="logout.php" class="btn btn-primary btn-sm">Sair do sistema</a>
-	</p>
+		if (isset($_GET['msg']))
+		{
+			include_once '../util.php';
+			echo validar_msg($_GET['msg']);
+		}
+		?>
 
-	<?php  
+		<h3>Cadastrar Livro:</h3>
 
-	if (isset($_GET['msg']))
-	{
-		include_once '../util.php';
-		echo validar_msg($_GET['msg']);
-	}
-	?>
+		<div class="col-5">
+			<form action="cadastrar.php" method="post">
+				
+				<p>
+					<label class="form-label">Título</label><br>
+					<input type="text" name="titulo" required class="form-control">
+				</p>
 
-	<h3>Cadastrar Livro:</h3>
+				<p>
+					<label class="form-label">Autor</label><br>
+					<input type="text" name="autor" required class="form-control">
+				</p>
 
-	<div class="col-5">
-		<form action="cadastrar.php" method="post">
-			
-			<p>
-				<label class="form-label">Título</label><br>
-				<input type="text" name="titulo" required class="form-control">
-			</p>
+				<p>
+					<label class="form-label">Editora</label><br>
+					<input type="text" name="editora" required class="form-control">
+				</p>
 
-			<p>
-				<label class="form-label">Autor</label><br>
-				<input type="text" name="autor" required class="form-control">
-			</p>
+				<p>
+					<button type="submit" name="salvar" class="btn btn-outline-primary">Salvar</button>
+				</p>
 
-			<p>
-				<label class="form-label">Editora</label><br>
-				<input type="text" name="editora" required class="form-control">
-			</p>
+			</form>
+		</div>
 
-			<p>
-				<button type="submit" name="salvar" class="btn btn-outline-primary">Salvar</button>
-			</p>
+		<h2>Livros Cadastrados</h2>
 
-		</form>
+		<?php  
+
+		echo exibir_livros();
+
+		?>
 	</div>
-
-	<h2>Livros Cadastrados</h2>
-
-	<?php  
-
-	echo exibir_livros();
-
-	?>
 
 </body>
 </html>
