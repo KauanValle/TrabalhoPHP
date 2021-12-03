@@ -1,14 +1,14 @@
 <?php include_once 'lock.php';
-include_once '../database/livro.dao.php'; 
+include_once '../database/crud.php'; 
 
-if (!isset($_GET['id_livro']))
+if (!isset($_GET['id']))
 {
 	header('location:index.php?msg=idinvalido');
 }
 else
 {
 	// tentar buscar o livro especificado no id
-	$result = buscar_livro($_GET['id_livro']);
+	$result = buscar($_GET['id']);
 
 	if($result == null)
 	{

@@ -10,7 +10,7 @@ else
 
 	include_once '../database/livro.dao.php';
 
-	$result = deletar_livro($id_livro);
+	$result = deletar($id_livro);
 
 	if ($result)
 	{

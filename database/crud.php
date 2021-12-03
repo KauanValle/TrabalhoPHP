@@ -18,7 +18,7 @@ function salvar($nome, $quantidade, $preco)
 	return false;
 }
 
-function buscar_livros()
+function buscar()
 {
 	$conn = conectar();
 
@@ -34,9 +34,9 @@ function buscar_livros()
 	return null;
 }
 
-function exibir_livros()
+function exibir()
 {
-	$result = buscar_livros();
+	$result = buscar();
 
 	if ($result == null)
 	{
@@ -74,25 +74,25 @@ function exibir_livros()
 	return $retorno;
 }
 
-function link_deletar($id_livro)
+function link_deletar($id)
 {
-	$link = '<a href="deletar.php?id_livro='.$id_livro.'" 
+	$link = '<a href="deletar.php?id_livro='.$id.'" 
 	onclick="return confirm(\'Tem certeza que deseja excluir este livro?\')" class="btn btn-danger">Deletar</a>';
 
 	return $link;
 }
 
-function link_editar($id_livro)
+function link_editar($id)
 {
-	$link = '<a href="editar.php?id_livro='.$id_livro.'" class="btn btn-warning">Editar</a>';
+	$link = '<a href="editar.php?id_livro='.$id.'" class="btn btn-warning">Editar</a>';
 	return $link;
 }
 
-function deletar_livro($id_livro)
+function deletar($id)
 {
 	$conn = conectar();
 
-	$sql = "DELETE FROM livros_tb WHERE id_livro = $id_livro";
+	$sql = "DELETE FROM livros_tb WHERE id_livro = $id";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -104,11 +104,11 @@ function deletar_livro($id_livro)
 	return false;
 }
 
-function buscar_livro($id_livro)
+function buscar_livro($id)
 {
 	$conn = conectar();
 
-	$sql = "SELECT * FROM produtos WHERE id = $id_livro";
+	$sql = "SELECT * FROM produtos WHERE id = $id";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -120,7 +120,7 @@ function buscar_livro($id_livro)
 	return null;
 }
 
-function editar_livro($nome, $quantidade, $preco, $id)
+function editar($nome, $quantidade, $preco, $id)
 {
 	$conn = conectar();
 

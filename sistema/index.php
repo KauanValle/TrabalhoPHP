@@ -63,7 +63,7 @@ include_once '../database/crud.php'; ?>
 
 		<?php  
 
-		echo exibir_livros();
+		echo exibir();
 
 		?>
 	</div>

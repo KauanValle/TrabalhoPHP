@@ -13,7 +13,7 @@ else
 
 	include_once '../database/livro.dao.php';
 
-	$result = editar_livro($id_livro, $titulo, $autor, $editora);
+	$result = editar($id_livro, $titulo, $autor, $editora);
 
 	if ($result)
 	{
