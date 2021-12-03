@@ -6,7 +6,7 @@ function buscar_usuario($usuario, $senha)
 
 	$conn = conectar();
 
-	$sql = "SELECT * FROM usuarios_tb WHERE usuario = '$usuario' AND senha = '$senha' ";
+	$sql = "SELECT * FROM usuarios WHERE nome = '$usuario' AND senha = '$senha' ";
 
 	$result = mysqli_query($conn, $sql);
 	

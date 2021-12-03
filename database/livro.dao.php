@@ -1,12 +1,12 @@
 <?php  
 include_once 'conexao.php';
 
-function salvar_livro($titulo, $autor, $editora)
+function salvar_livro($nome, $quantidade, $preco)
 {
 	$conn = conectar();
 
-	$sql = "INSERT INTO livros_tb (titulo, autor, editora) 
-	VALUES ('$titulo', '$autor', '$editora')";
+	$sql = "INSERT INTO produtos (nome, quantidade, preco) 
+	VALUES ('$nome', '$quantidade', '$preco')";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -22,7 +22,7 @@ function buscar_livros()
 {
 	$conn = conectar();
 
-	$sql = "SELECT * FROM livros_tb";
+	$sql = "SELECT * FROM produtos";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -108,7 +108,7 @@ function buscar_livro($id_livro)
 {
 	$conn = conectar();
 
-	$sql = "SELECT * FROM livros_tb WHERE id_livro = $id_livro";
+	$sql = "SELECT * FROM produtos WHERE id = $id_livro";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -120,12 +120,12 @@ function buscar_livro($id_livro)
 	return null;
 }
 
-function editar_livro($id_livro, $titulo, $autor, $editora)
+function editar_livro($nome, $quantidade, $preco, $id)
 {
 	$conn = conectar();
 
-	$sql = "UPDATE livros_tb SET titulo = '$titulo', autor = '$autor', editora = '$editora' 
-	WHERE id_livro = $id_livro";
+	$sql = "UPDATE produtos SET nome = '$nome', quantidade = '$quantidade', preco = '$preco' 
+	WHERE id = $id";
 
 	$result = mysqli_query($conn, $sql);
 
