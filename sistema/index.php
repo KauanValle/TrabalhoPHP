@@ -1,5 +1,5 @@
 <?php include_once 'lock.php';
-include_once '../database/livro.dao.php'; ?>
+include_once '../database/crud.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
