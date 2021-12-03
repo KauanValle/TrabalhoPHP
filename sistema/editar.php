@@ -7,7 +7,6 @@ if (!isset($_GET['id']))
 }
 else
 {
-	// tentar buscar o livro especificado no id
 	$result = buscar($_GET['id']);
 
 	if($result == null)
@@ -16,7 +15,6 @@ else
 	}
 	else
 	{
-		// converter o retorno (result) em um array associativo
 		$produto = mysqli_fetch_assoc($result);
 	}
 }
@@ -54,17 +52,17 @@ else
 				
 				<p>
 					<label class="form-label">Nome do Produto</label><br>
-					<input type="text" name="nome" required value="<?= $produto['nome'] ?>" class="form-control">
+					<input type="text" name="nome" required value="<?= $produto['nome']; ?>" class="form-control">
 				</p>
 
 				<p>
 					<label class="form-label">Quantidade do Produto</label><br>
-					<input type="text" name="quantidade" required value="<?= $produto['quantidade'] ?>" class="form-control">
+					<input type="text" name="quantidade" required value="<?= $produto['quantidade']; ?>" class="form-control">
 				</p>
 
 				<p>
 					<label class="form-label">Preço do Produto</label><br>
-					<input type="text" name="preco" required value="<?= $produto['preco'] ?>" class="form-control">
+					<input type="text" name="preco" required value="<?= $produto['preco']; ?>" class="form-control">
 				</p>
 
 				<p>

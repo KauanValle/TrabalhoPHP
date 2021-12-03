@@ -1,5 +1,4 @@
 <?php include_once 'lock.php';
-// se o form de edição nao foi enviado ou se algum campo estiver em branco
 if (!isset($_POST['salvar']) || empty($_POST['nome']) || empty($_POST['quantidade']) || empty($_POST['preco']))
 {
 	header('location:index.php?msg=edtembranco');

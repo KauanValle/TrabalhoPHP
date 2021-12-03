@@ -92,7 +92,7 @@ function deletar($id)
 {
 	$conn = conectar();
 
-	$sql = "DELETE FROM livros_tb WHERE id_livro = $id";
+	$sql = "DELETE FROM produtos WHERE id = $id";
 
 	$result = mysqli_query($conn, $sql);
 
