@@ -17,7 +17,7 @@ else
 	else
 	{
 		// converter o retorno (result) em um array associativo
-		$livro = mysqli_fetch_assoc($result);
+		$produto = mysqli_fetch_assoc($result);
 	}
 }
 
