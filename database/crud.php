@@ -104,7 +104,7 @@ function deletar($id)
 	return false;
 }
 
-function buscar_livro($id)
+function buscar_produto($id)
 {
 	$conn = conectar();
 

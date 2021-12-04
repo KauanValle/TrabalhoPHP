@@ -7,7 +7,7 @@ if (!isset($_GET['id']))
 }
 else
 {
-	$result = buscar($_GET['id']);
+	$result = buscar_produto($_GET['id']);
 
 	if($result == null)
 	{
