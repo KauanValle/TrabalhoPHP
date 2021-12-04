@@ -1,14 +1,14 @@
 <?php  include_once 'lock.php';
 
-if (!isset($_GET['id_livro']))
+if (!isset($_GET['id']))
 {
 	header('location:index.php?msg=idinvalido');
 }
 else
 {
-	$id_livro = $_GET['id_livro'];
+	$id_livro = $_GET['id'];
 
-	include_once '../database/livro.dao.php';
+	include_once '../database/crud.php';
 
 	$result = deletar($id_livro);
 
